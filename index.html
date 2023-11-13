@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body class="whole-body">
+    <div class="calculator">
+        <input typle="text" class="calculator-input" readonly>
+        <div id="button-container">
+            <button id="button-ac" onclick="currentDisplay='';document.querySelector('.calculator-input').value = currentDisplay;">AC</button>
+
+            <button id="button" onclick="currentDisplay=currentDisplay+'1';document.querySelector('.calculator-input').value = currentDisplay;">1</button>
+
+            <button id="button" onclick="currentDisplay=currentDisplay+'2';document.querySelector('.calculator-input').value = currentDisplay;">2</button>
+
+            <button id="button-Operators" onclick="currentDisplay=currentDisplay+'+';document.querySelector('.calculator-input').value = currentDisplay;">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <button id="button" onclick="currentDisplay=currentDisplay+'3';document.querySelector('.calculator-input').value = currentDisplay;">3</button>
+
+            <button id="button" onclick="currentDisplay=currentDisplay+'4';document.querySelector('.calculator-input').value = currentDisplay;">4</button>
+
+            <button id="button-Operators-minus" onclick="currentDisplay=currentDisplay+'-';document.querySelector('.calculator-input').value = currentDisplay;">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+            <button id="button" onclick="currentDisplay=currentDisplay+'5';document.querySelector('.calculator-input').value = currentDisplay;">5</button>
+
+            <button id="button" onclick="currentDisplay=currentDisplay+'6';document.querySelector('.calculator-input').value = currentDisplay;">6</button>
+
+            <button id="button-Operators" onclick="currentDisplay=currentDisplay+'*';document.querySelector('.calculator-input').value = currentDisplay;">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <button id="button"onclick="currentDisplay=currentDisplay+'7';document.querySelector('.calculator-input').value = currentDisplay;" >7</button>
+
+            <button id="button" onclick="currentDisplay=currentDisplay+'8';document.querySelector('.calculator-input').value = currentDisplay;">8</button>
+            <button id="button-Operators" onclick="currentDisplay=currentDisplay+'/';document.querySelector('.calculator-input').value = currentDisplay;">
+                <i class="fa-solid fa-divide"></i>
+            </button>
+
+            <button id="button-Operators" onclick="let result = eval(currentDisplay); currentDisplay=result; document.querySelector('.calculator-input').value = currentDisplay;" >
+                <i class="fa-solid fa-equals"></i>
+            </button>
+            <button id="button" onclick="currentDisplay=currentDisplay+'9';document.querySelector('.calculator-input').value = currentDisplay;">9</button>
+            <button id="button" onclick="currentDisplay=currentDisplay+'0';document.querySelector('.calculator-input').value = currentDisplay;">0</button>
+            <button id="button" onclick="currentDisplay=currentDisplay+'.';document.querySelector('.calculator-input').value = currentDisplay;">.</button>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
